@@ -141,3 +141,14 @@ img {
   font-size: 1.2em;
   line-height: 1.1;
 }
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 1.6em;     /* 小さくする */
+    line-height: 1.3;     /* 行間を詰める */
+  }
+
+  .hero-text h1 span {
+    margin-bottom: 6px;   /* 行ごとの間隔も少し縮める */
+  }
+}
