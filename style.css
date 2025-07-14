@@ -145,7 +145,6 @@ img {
 /* このブロックを削除するか、以下のように書き換えてください */
 @media (max-width: 600px) {
   .hero-content {
-    flex-direction: row; /* ← 縦並びにしない！ */
     flex-wrap: wrap;     /* ← はみ出るのを防ぐ */
     align-items: flex-start;
   }
