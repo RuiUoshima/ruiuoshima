@@ -235,3 +235,11 @@ td:first-child {
     font-size: 1em;  /* ← 文字が大きすぎるときはここで調整 */
   }
 }
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.6em;
+    line-height: 1.4;
+  }
+}
+
