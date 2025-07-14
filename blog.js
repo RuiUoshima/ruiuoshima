@@ -156,3 +156,23 @@ function deleteComment(blogIndex, commentIndex) {
   localStorage.setItem(`comments-${blogIndex}`, JSON.stringify(comments));
   renderComments(blogIndex);
 }
+
+async function fetchBlogs() {
+    const snapshot = await db.collection("blogs").orderBy("date", "desc").get();
+    blogList.innerHTML = "";
+
+    snapshot.forEach(doc => {
+      const blog = doc.data();
+      const div = document.createElement("div");
+      div.classList.add("blog-entry");
+      div.innerHTML = `
+        <h3>${blog.title}</h3>
+        <p>${blog.content}</p>
+        <small>${blog.date}</small>
+        <hr>
+      `;
+      blogList.appendChild(div);
+    });
+  }
+
+  fetchBlogs(); // 初回読み込み
