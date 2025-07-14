@@ -142,3 +142,26 @@ img {
   line-height: 1.1;
 }
 
+/* このブロックを削除するか、以下のように書き換えてください */
+@media (max-width: 600px) {
+  .hero-content {
+    flex-direction: row; /* ← 縦並びにしない！ */
+    flex-wrap: wrap;     /* ← はみ出るのを防ぐ */
+    align-items: flex-start;
+  }
+
+  .hero-content img {
+    width: 45%;
+    min-width: 150px;
+  }
+
+  .hero-text {
+    width: 50%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5em;
+    line-height: 1.4;
+    text-align: left;
+  }
+}
