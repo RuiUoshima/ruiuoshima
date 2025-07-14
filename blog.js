@@ -176,3 +176,23 @@ async function fetchBlogs() {
   }
 
   fetchBlogs(); // 初回読み込み
+
+import { onSnapshot, collection, query, orderBy } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+// ...
+
+function loadBlogsRealtime() {
+  const q = query(collection(db, "blogs"), orderBy("timestamp", "desc"));
+  onSnapshot(q, (snapshot) => {
+    blogList.innerHTML = "";
+    snapshot.forEach(doc => {
+      const data = doc.data();
+      const div = document.createElement("div");
+      div.innerHTML = `<h3>${data.title}</h3><p>${data.content}</p><small>${(data.timestamp.toDate()).toLocaleString()}</small><hr>`;
+      blogList.appendChild(div);
+    });
+  });
+}
+
+// getDocs の代わりにこちらを呼ぶ
+loadBlogsRealtime();
