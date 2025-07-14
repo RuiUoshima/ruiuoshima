@@ -144,11 +144,11 @@ img {
 
 @media (max-width: 600px) {
   .hero-text h1 {
-    font-size: 1.6em;     /* 小さくする */
-    line-height: 0;     /* 行間を詰める */
+    font-size: 1.3em;     /* 小さくする */
+    line-height: 0.2;     /* 行間を詰める */
   }
 
   .hero-text h1 span {
-    margin-bottom: 1px;   /* 行ごとの間隔も少し縮める */
+    margin-bottom: 3px;   /* 行ごとの間隔も少し縮める */
   }
 }
