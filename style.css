@@ -149,6 +149,6 @@ img {
   }
 
   .hero-text h1 span {
-    margin-bottom: 6px;   /* 行ごとの間隔も少し縮める */
+    margin-bottom: 0px;   /* 行ごとの間隔も少し縮める */
   }
 }
