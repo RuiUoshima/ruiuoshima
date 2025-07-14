@@ -232,6 +232,6 @@ td:first-child {
   }
 
   .hero-text h1 {
-    font-size: 2em;  /* ← 文字が大きすぎるときはここで調整 */
+    font-size: 1em;  /* ← 文字が大きすぎるときはここで調整 */
   }
 }
