@@ -218,3 +218,42 @@ td:first-child {
   line-height: 1.1;  /* 行間を狭く */
 }
 
+@media (max-width: 600px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6em;
+    line-height: 1.4;
+  }
+
+  .hero-text h1 span {
+    margin-bottom: 6px;
+  }
+
+  .hero-content img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .flag-list img {
+    width: 30px;  /* 小さめに調整 */
+  }
+
+  .navbar-left {
+    font-size: 1em;
+  }
+
+  .navbar-right {
+    gap: 16px;
+  }
+}
