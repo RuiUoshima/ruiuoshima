@@ -217,3 +217,21 @@ td:first-child {
   font-size: 1.2em;
   line-height: 1.1;  /* 行間を狭く */
 }
+
+@media (max-width: 600px) {
+  .hero-content {
+    flex-direction: column; /* ← 横並びから縦並びに変更！ */
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2em;  /* ← 文字が大きすぎるときはここで調整 */
+  }
+}
